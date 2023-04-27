@@ -42,7 +42,13 @@ function CounterGame(userInput) {
         countUp = true;
 
     while (index <= userInput) {
-        console.log(`The person to say ${index} is ${person}.`);
+        if (person > 10) {
+            person = 1;
+        } else if (person < 1) {
+            person = 10;
+        };
+
+        console.log(`Person ${person} says number ${index}.`);
 
         if (index % 7 === 0) {
             countUp = !countUp;
@@ -54,14 +60,8 @@ function CounterGame(userInput) {
             person--;
         };
     
-        if (person > 10) {
-            person = 1;
-        } else if (person < 1) {
-            person = 10;
-        };
-    
         if (index % 11 === 0) {
-            if (countUp = true) {
+            if (countUp === true) {
                 person++;
             } else {
                 person--;
@@ -71,3 +71,5 @@ function CounterGame(userInput) {
         index++;  
     };
 };
+
+CounterGame(prompt("Upper limit?", ""))
