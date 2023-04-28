@@ -1,4 +1,12 @@
 /*
+CHALLENGE:
+---------
+10 people are sitting in a circle. They have to count up to 100, each person saying a number. 
+However, each time they reach a multiple of 7, they switch directions (like an UNO reverse card),
+and each time they reach a multiple of 11, they skip the next person (like an UNO skip card).
+Who says the number 100?
+*/
+/*
 PROGRAM CounterGame (userInput)
     person = 1
     index = 1
