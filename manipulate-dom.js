@@ -27,3 +27,10 @@ nextDiv.style.cssText = "background-color: pink; border: 2px solid black;";
     nextDiv.appendChild(header1);
     nextDiv.appendChild(para2);
 container.appendChild(nextDiv);
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
