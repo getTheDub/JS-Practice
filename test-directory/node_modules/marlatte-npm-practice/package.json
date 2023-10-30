@@ -1,0 +1,11 @@
+{
+	"name": "marlatte-npm-practice",
+	"version": "1.0.0",
+	"description": "Creating my first Node module.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Walker Marlatt",
+	"license": "ISC"
+}
