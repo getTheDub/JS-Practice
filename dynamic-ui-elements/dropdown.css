@@ -1,0 +1,78 @@
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+nav {
+	background-color: blue;
+	color: white;
+	padding: 10px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+}
+
+li {
+	flex: 1;
+	text-align: center;
+}
+
+#menu-bar {
+	width: 50vw;
+}
+.marlatte-drop {
+	position: relative;
+}
+
+.marlatte-drop-btn {
+	background: none;
+	border: none;
+	color: unset;
+	font-size: unset;
+	cursor: pointer;
+}
+
+.marlatte-drop-btn::after {
+	position: relative;
+	left: 5px;
+	display: inline-block;
+	content: 'v';
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 10px;
+	transition: all 0.3s;
+}
+
+.marlatte-drop-btn:has(~ .marlatte-drop-content.expanded)::after {
+	transform: rotate(180deg);
+}
+
+.marlatte-drop-content {
+	position: absolute;
+	top: 30px;
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	background-color: rgb(54, 54, 54);
+	transition: all 0.3s;
+}
+
+.marlatte-drop-content.expanded {
+	height: auto;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+.marlatte-drop-content > * {
+	flex: 1;
+	min-width: 100px;
+	display: flex;
+	justify-content: center;
+}
+
+.marlatte-drop-item {
+	display: block;
+}
