@@ -100,3 +100,23 @@ document
 	.appendChild(createDropdown('drop-1', hiddenLinks));
 
 addDropListeners();
+
+// ------------------------------------------------------- //
+// ------------------ Image Carousel -------------------- //
+// ------------------------------------------------------- //
+let slideIndex = 0;
+
+function showSlide() {
+	const allSlides = document.querySelectorAll('.slide');
+	allSlides.forEach((slide) => {
+		slide.classList.remove('active');
+	});
+
+	allSlides[slideIndex].classList.add('active');
+}
+
+function changeSlide(newIndex) {
+	slideIndex = newIndex;
+}
+
+showSlide();

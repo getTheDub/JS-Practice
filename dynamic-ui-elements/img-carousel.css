@@ -1,0 +1,33 @@
+button {
+	all: unset;
+}
+
+.slide {
+	display: none;
+}
+
+.slide.active {
+	display: block;
+}
+
+img {
+	width: 100%;
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+.dot {
+	--dot-dim: 20px;
+	width: var(--dot-dim);
+	height: var(--dot-dim);
+	border-radius: 30px;
+	background-color: lightgray;
+}
+
+.dot.active {
+	background-color: grey;
+}
