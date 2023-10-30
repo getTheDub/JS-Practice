@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Practice</title>
-</head>
-<body>
-    <h1>Hello, Dave.</h1>
-    <script src="debugging-practice.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Javascript Practice</title>
+		<link rel="stylesheet" href="./dynamic-ui-elements/dropdown.css" />
+		<link rel="stylesheet" href="./dynamic-ui-elements/mobile-nav.css" />
+		<link rel="stylesheet" href="./dynamic-ui-elements/img-carousel.css" />
+		<script src="./dynamic-ui-elements/dropdown.js" defer></script>
+		<script src="./dynamic-ui-elements/mobile-nav.js" defer></script>
+		<script src="./dynamic-ui-elements/img-carousel.js" defer></script>
+	</head>
+	<body>
+		<section class="dropdown-container">
+			<nav>
+				<ul>
+					<li>link 1</li>
+					<li>link 2</li>
+					<li>link 3</li>
+					<li>link 4</li>
+					<li>link 5</li>
+					<li class="dropdown">
+						<button class="dropdown-btn">Dropdown</button>
+						<ul class="dropdown-content">
+							<li>hidden 1</li>
+							<li>hidden 2</li>
+							<li>hidden 3</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<section class="mobile-nav-container"></section>
+		<section class="img-carousel-container"></section>
+	</body>
 </html>
