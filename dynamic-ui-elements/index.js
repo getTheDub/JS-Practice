@@ -153,3 +153,7 @@ nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
 
 showSlide();
+
+setInterval(() => {
+	nextSlide();
+}, 5000);

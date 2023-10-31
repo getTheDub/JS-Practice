@@ -5,14 +5,28 @@ button {
 
 .carousel {
 	position: relative;
+	background-color: white;
+
+	border: 10px outset burlywood;
 }
 
 .slide {
 	display: none;
+	animation-name: fade;
+	animation-duration: 1.7s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .slide.active {
-	display: block;
+	display: flex;
 }
 
 img {
