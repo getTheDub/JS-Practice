@@ -105,18 +105,51 @@ addDropListeners();
 // ------------------ Image Carousel -------------------- //
 // ------------------------------------------------------- //
 let slideIndex = 0;
+const dotBtns = document.querySelectorAll('.dot');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const allSlides = document.querySelectorAll('.slide');
 
 function showSlide() {
-	const allSlides = document.querySelectorAll('.slide');
 	allSlides.forEach((slide) => {
 		slide.classList.remove('active');
 	});
-
+	dotBtns.forEach((dot) => {
+		dot.classList.remove('active');
+	});
+	dotBtns[slideIndex].classList.add('active');
 	allSlides[slideIndex].classList.add('active');
 }
 
 function changeSlide(newIndex) {
-	slideIndex = newIndex;
+	showSlide((slideIndex = newIndex));
 }
+
+function nextSlide() {
+	slideIndex += 1;
+	if (slideIndex < allSlides.length) {
+		showSlide(slideIndex);
+	} else {
+		showSlide((slideIndex = 0));
+	}
+}
+
+function prevSlide() {
+	slideIndex -= 1;
+	if (slideIndex < 0) {
+		showSlide((slideIndex = 4));
+	} else {
+		showSlide(slideIndex);
+	}
+}
+
+dotBtns.forEach((dot) => {
+	dot.addEventListener('click', (e) => {
+		changeSlide(+e.target.dataset.slideIndex);
+	});
+});
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
 
 showSlide();
